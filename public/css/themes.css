@@ -1,0 +1,52 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --chat-bg: rgba(255, 255, 255, 0.8);
+    --message-self: linear-gradient(45deg, #2196F3, #00BCD4);
+    --message-others: rgba(255, 255, 255, 0.7);
+    --text-color: #333;
+    --text-secondary: #666;
+    --border-color: rgba(255, 255, 255, 0.3);
+    --input-bg: rgba(255, 255, 255, 0.6);
+    --header-bg: rgba(255, 255, 255, 0.9);
+    --form-bg: rgba(255, 255, 255, 0.8);
+    --users-bg: rgba(255, 255, 255, 0.8);
+    --button-bg: #0084ff;
+    --button-hover: #0073e6;
+    --shadow-color: rgba(31, 38, 135, 0.15);
+}
+
+[data-theme="dark"] {
+    --bg-gradient: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+    --chat-bg: rgba(40, 40, 40, 0.8);
+    --message-self: linear-gradient(45deg, #1e88e5, #0097a7);
+    --message-others: rgba(60, 60, 60, 0.7);
+    --text-color: #fff;
+    --text-secondary: #aaa;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --input-bg: rgba(60, 60, 60, 0.6);
+    --header-bg: rgba(40, 40, 40, 0.9);
+    --form-bg: rgba(40, 40, 40, 0.8);
+    --users-bg: rgba(40, 40, 40, 0.8);
+    --button-bg: #1976d2;
+    --button-hover: #1565c0;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.theme-toggle:hover {
+    background: var(--border-color);
+}

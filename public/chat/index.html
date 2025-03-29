@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>聊天室</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/themes.css">
+    <link rel="stylesheet" href="/css/chat.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-area">
+            <div class="chat-header">
+                聊天室
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </div>
+            <ul id="messages"></ul>
+            <form id="form">
+                <button type="button" id="emojiButton">😊</button>
+                <input id="input" placeholder="输入消息..." autocomplete="off" />
+                <button type="submit">发送</button>
+            </form>
+            <div id="emojiPicker" class="emoji-picker"></div>
+        </div>
+        <div id="users">
+            <h3>在线用户</h3>
+            <ul id="userList"></ul>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emoji-mart/data"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>

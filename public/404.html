@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - 页面未找到</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <style>
+        .error-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .error-code {
+            font-size: 120px;
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: bold;
+        }
+        .error-message {
+            font-size: 24px;
+            color: var(--text-color);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <p class="error-message">抱歉，您访问的页面不存在</p>
+        <a href="/chat" class="btn btn-primary">返回聊天室</a>
+    </div>
+</body>
+</html>
