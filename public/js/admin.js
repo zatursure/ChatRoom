@@ -1,5 +1,5 @@
 const socket = io();
-const adminPassword = 'Zatursure114514.'; // 实际应用中应该使用更安全的认证方式
+const adminPassword = 'admin123'; // 实际应用中应该使用更安全的认证方式
 
 // 验证管理员身份
 function authenticate() {

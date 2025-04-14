@@ -3,6 +3,7 @@
 <head>
     <title>聊天室</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/themes.css">
     <link rel="stylesheet" href="/css/chat.css">
 </head>
@@ -10,19 +11,30 @@
     <div class="container">
         <div class="chat-area">
             <div class="chat-header">
-                聊天室
-                <button id="themeToggle" class="theme-toggle">🌙</button>
+                <div class="header-left">
+                    <h1>ChatRoom</h1>
+                    <div id="status" class="disconnected">未连接</div>
+                </div>
+                <div class="header-right">
+                    <button id="themeToggle" class="theme-toggle" title="切换主题">🌙</button>
+                </div>
             </div>
             <ul id="messages"></ul>
-            <form id="form">
-                <button type="button" id="emojiButton">😊</button>
-                <input id="input" placeholder="输入消息..." autocomplete="off" />
+            <div class="typing-indicator" id="typingIndicator"></div>
+            <form id="form" class="disabled">
+                <button type="button" id="emojiButton" title="选择表情">😊</button>
+                <input id="input" 
+                    placeholder="连接中..." 
+                    autocomplete="off" 
+                    disabled
+                    maxlength="500"
+                />
                 <button type="submit">发送</button>
             </form>
             <div id="emojiPicker" class="emoji-picker"></div>
         </div>
         <div id="users">
-            <h3>在线用户</h3>
+            <h3>在线用户 <span id="userCount">0</span></h3>
             <ul id="userList"></ul>
         </div>
     </div>

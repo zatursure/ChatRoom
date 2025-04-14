@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录 - ChatRoom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="background-animations">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>欢迎来到ChatRoom</h1>
+        </div>
+        <form id="loginForm" class="login-form">
+            <input 
+                type="text" 
+                id="username" 
+                required 
+                minlength="2" 
+                maxlength="20" 
+                placeholder="请输入用户名" 
+                autocomplete="off"
+            >
+            <button type="submit">
+                <span>进入聊天室</span>
+            </button>
+        </form>
+        <div id="errorMessage" class="error-message"></div>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+:root {
+    --admin-primary: #1a73e8;
+    --admin-danger: #dc3545;
+    --admin-warning: #ffc107;
+    --admin-success: #28a745;
+    --admin-bg: #f8f9fa;
+    --admin-card-bg: #ffffff;
+    --admin-text: #212529;
+    --admin-border: #dee2e6;
+    --admin-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+    --admin-bg: #1a1f24;
+    --admin-card-bg: #2c3e50;
+    --admin-text: #e2e8f0;
+    --admin-border: rgba(255, 255, 255, 0.1);
+    --admin-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--admin-border);
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--admin-primary), #64b5f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.admin-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.user-management, .announcement {
+    background: var(--admin-card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px var(--admin-shadow);
+}
+
+.user-management h2, .announcement h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    color: var(--admin-text);
+}
+
+.user-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dark-theme .user-item {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.user-item:hover {
+    transform: translateX(5px);
+}
+
+.user-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.user-actions button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.user-actions button:first-child {
+    background: var(--admin-danger);
+    color: white;
+}
+
+.user-actions button:last-child {
+    background: var(--admin-warning);
+    color: #000;
+}
+
+.user-actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#announcementText {
+    width: 100%;
+    min-height: 120px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--admin-border);
+    border-radius: 8px;
+    resize: vertical;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+#announcementText:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
+
+#sendAnnouncement {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--admin-primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#sendAnnouncement:hover {
+    background: #1557b0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--admin-border);
+    border-radius: 4px;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 1rem;
+    }
+
+    .admin-content {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .user-management, .announcement {
+        padding: 1rem;
+    }
+}
