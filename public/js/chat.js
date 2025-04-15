@@ -65,8 +65,6 @@ const form = document.getElementById('form');
 const input = document.getElementById('input');
 const userList = document.getElementById('userList');
 const themeToggle = document.getElementById('themeToggle');
-const emojiButton = document.getElementById('emojiButton');
-const emojiPicker = document.getElementById('emojiPicker');
 const typingIndicator = document.getElementById('typingIndicator');
 const userCount = document.getElementById('userCount');
 
@@ -79,57 +77,12 @@ if (isDarkTheme) {
     themeToggle.textContent = '☀️';
 }
 
-// 主题切换事件处理 - 只在本地生效
+// 主题切换事件处理
 themeToggle.addEventListener('click', () => {
     isDarkTheme = !isDarkTheme;
     document.body.classList.toggle('dark-theme');
     themeToggle.textContent = isDarkTheme ? '☀️' : '🌙';
     localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
-    
-    // 更新表情选择器主题（如果已经创建）
-    if (picker) {
-        picker.updateTheme(isDarkTheme ? 'dark' : 'light');
-    }
-});
-
-// 表情选择器初始化
-let picker = null;
-
-function renderEmoji(emoji) {
-    input.value += emoji.native;
-    input.focus();
-    emojiPicker.style.display = 'none';
-}
-
-emojiButton.addEventListener('click', () => {
-    if (!picker) {
-        picker = new EmojiMart.Picker({
-            data: emojiData,
-            onEmojiSelect: renderEmoji,
-            locale: 'zh',
-            theme: isDarkTheme ? 'dark' : 'light',
-            autoFocus: true,
-            showPreview: false,
-            showSkinTones: false,
-            style: {
-                width: '300px'
-            }
-        });
-        emojiPicker.appendChild(picker);
-    }
-    
-    if (emojiPicker.style.display === 'none' || !emojiPicker.style.display) {
-        emojiPicker.style.display = 'block';
-    } else {
-        emojiPicker.style.display = 'none';
-    }
-});
-
-// 点击其他地方关闭表情选择器
-document.addEventListener('click', (e) => {
-    if (!emojiPicker.contains(e.target) && e.target !== emojiButton) {
-        emojiPicker.style.display = 'none';
-    }
 });
 
 // Socket事件处理

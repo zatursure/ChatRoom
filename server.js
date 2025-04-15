@@ -49,6 +49,7 @@ function log(level, type, message, data = null) {
 }
 
 app.use(express.static('public'));
+app.use('/node_modules', express.static('node_modules')); // 添加对node_modules的静态文件服务
 app.use(express.json());
 app.use(cookieParser());
 

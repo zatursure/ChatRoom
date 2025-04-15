@@ -118,6 +118,7 @@ body.dark-theme {
     font-size: 1.5rem;
     font-weight: 600;
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
@@ -314,34 +315,6 @@ body.dark-theme {
     transform: translate(-50%, -50%) scale(1.5);
 }
 
-.dark-theme #form > button {
-    background: var(--dark-button);
-}
-
-.dark-theme #form > button:hover {
-    background: var(--dark-button-hover);
-}
-
-/* 表情选择器 */
-#emojiButton {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    padding: 0 10px;
-    transition: transform 0.2s;
-}
-
-#emojiButton:hover {
-    animation: emojiPulse 0.3s ease;
-}
-
-@keyframes emojiPulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
 /* 用户列表 */
 #users {
     width: 280px;
@@ -387,18 +360,6 @@ body.dark-theme {
 
 .dark-theme #userList li:hover {
     background: rgba(134, 168, 231, 0.05);
-}
-
-/* 表情选择器 */
-.emoji-picker {
-    position: absolute;
-    bottom: 80px;
-    left: 20px;
-    z-index: 1000;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 8px 32px var(--light-shadow);
-    overflow: hidden;
-    display: none;
 }
 
 /* 打字指示器 */

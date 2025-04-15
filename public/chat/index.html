@@ -22,7 +22,6 @@
             <ul id="messages"></ul>
             <div class="typing-indicator" id="typingIndicator"></div>
             <form id="form" class="disabled">
-                <button type="button" id="emojiButton" title="选择表情">😊</button>
                 <input id="input" 
                     placeholder="连接中..." 
                     autocomplete="off" 
@@ -31,7 +30,6 @@
                 />
                 <button type="submit">发送</button>
             </form>
-            <div id="emojiPicker" class="emoji-picker"></div>
         </div>
         <div id="users">
             <h3>在线用户 <span id="userCount">0</span></h3>
@@ -39,8 +37,6 @@
         </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emoji-mart/data"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
     <script src="/js/chat.js"></script>
 </body>
 </html>
